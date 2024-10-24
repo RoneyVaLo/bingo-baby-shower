@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffe4e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+
+/* Container Card */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Media query para pantallas más grandes (ej.: tablets, desktops) */
+@media (min-width: 768px) {
+    .card {
+      width: 80%;
+      padding: 3rem;
+    }
+  }
+
+/* Title */
+.card h1 {
+  font-size: 2rem;
+  color: #ec4899;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+/* Word Display */
+.word-display {
+  background-color: #bfdbfe;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin: 1rem auto;
+  min-height: 100px;
+  max-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .word-display {
+      max-width: 300px;
+    }
+  }
+
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-word {
+  background-color: #ec4899;
+}
+
+.new-word:hover {
+  background-color: #db2777;
+}
+
+.reset {
+  background-color: #f59e0b;
+}
+
+.reset:hover {
+  background-color: #d97706;
+}
+
+/* Icon inside button */
+.icon {
+  font-size: 1.5rem;
+}
+
+/* Word History */
+.history {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .history {
+        max-width: 300px;
+    }
+  }
+
+.history h2 {
+  color: #ec4899;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.word-history {
+  background-color: #e9d5ff;
+  border-radius: 16px;
+  padding: 1rem;
+  max-height: 150px;
+  min-height: 60px;
+  overflow-y: scroll;
+  list-style: none;
+  margin: 0;
+
+  display: flex;
+  gap: 4px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.word-history::-webkit-scrollbar {
+    display: none;
+  }
+
+  .word-history {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+.word-history li {
+  color: #fff;
+  font-weight: 700;
+  margin: 0 4px;
+  margin-bottom: 0.5rem;
+  padding: 1em 2em;
+  text-align: center;
+  background-color: #ec4899;
+  border-radius: 10px;
+  white-space: nowrap;
+
+  flex: 1 1 calc(25% - 1rem);
+}
